@@ -1,27 +1,15 @@
 <?php
-$to = 'vicente.oliva.monardes@gmail.com';
-$subject = 'Marriage Proposal';
-$from = 'vicho.oliva.monardes@gmail.com';
- 
-// To send HTML mail, the Content-type header must be set
-$headers  = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
- 
-// Create email headers
-$headers .= 'From: '.$from."\r\n".
-    'Reply-To: '.$from."\r\n" .
-    'X-Mailer: PHP/' . phpversion();
- 
-// Compose a simple HTML email message
-$message = '<html><body>';
-$message .= '<h1 style="color:#f40;">Hi Jane!</h1>';
-$message .= '<p style="color:#080;font-size:18px;">Will you marry me?</p>';
-$message .= '</body></html>';
- 
-// Sending email
-if(mail($to, $subject, $message, $headers)){
-    echo 'Your mail has been sent successfully.';
-} else{
-    echo 'Unable to send email. Please try again.';
+if($_POST["submit"]) {
+$recipient = "brentw.white@gmail.com"; //my email
+$subject = 'Email message from Point Plumbing';
+$name = $_POST ["yourName"];
+$email = $_POST["yourEmail"];
+$phone = $_POST["yourPhone"];
+$location = $_POST["yourLocate"];
+$message = $_POST["message-me"];
+
+$mailBody="Name: $name\nEmail: $email\n\n$message";
+mail($recipient, $subject, $mailBody, "From: $name <$email>");
+$thankYou="<p>Thank you! We will be in contact with you shortly.</p>";
 }
 ?>

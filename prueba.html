@@ -1,27 +1,46 @@
-<!DOCTYPE html>
-<head>
-    <title>Contact Form</title>
-</head>
-<body>
-    <h3>Contact us</h3>
-    <form id="fcf-form-id" class="fcf-form-class" method="post" action="index.php">
-            <label for="Name" class="fcf-label">Your name</label>
-            <div class="fcf-input-group">
-                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+<form action="submit_form.php" method="post" id="spaceing" data-abide>
+        <div class="form-bg">
+            <div class="row">
+                <div id="name" class="large-6 medium-6 small-12 columns">
+                    <label> <h5>Name</h5>
+                        <input type="text" name="yourName" placeholder="What is you're name?"></input>
+                    </label>
+                </div>
+
+                <div id="email" class="large-6 medium-6 small-12 columns">
+                    <label><h5>Email</h5>
+                        <input type="email" name="yourEmail" placeholder="Please enter in you're email."required></input>
+                    </label>
+                    <small class="error">An email Address is required.</small>
+                </div>
             </div>
-        <div class="fcf-form-group">
-            <label for="Email" class="fcf-label">Your email address</label>
-            <div class="fcf-input-group">
-                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
-            </div>
-        <div class="fcf-form-group">
-            <label for="Message" class="fcf-label">Your message</label>
-            <div class="fcf-input-group">
-                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+
+                <div class="row">
+                    <div id="phone"class="large-6 medium-6 small-12 columns">
+                        <label><h5>Phone</h5>
+                            <input type="text" name="yourPhone" placeholder="Please enter you're phone number."></input>
+                        </label>
+                    </div>
+
+                    <div id="location" class="large-6 medium-6 small-12 columns">
+                        <label><h5>Location</h5>
+                            <input type="text" name="yourLocate" placeholder="Where on Oahu are you currently living?"></input>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="message-area" class="large-12 medium-12 small-12 columns">
+                        <label><h5>Message</h5>
+                            <textarea id="message" name="yourMessage" placeholder="Please tell us about you're plumbing issues."></textarea>
+                        </label>
+                    </div>
+                </div>
+
+            <div class="row">
+                <div id="submit" class="large-3 medium-3 small-3 columns">
+                    <button type="submit-me">Submit</button>
+                </div>
             </div>
         </div>
-        <div class="fcf-form-group">
-            <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send</button>
-        </div>
-</body>
-</html>
+    </form>
