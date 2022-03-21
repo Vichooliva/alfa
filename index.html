@@ -433,15 +433,12 @@
                     <fieldset>
                       <button type="submit" id="form-submit" class="button">Enviar </button>
                       <script>
-                        fetch('https://backend.alfametrics.cl/contact', {
-      headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-      },
-      method: 'POST',
-      body: JSON.stringify({text:"Prueba", from:"hugojerez21@gmail.com"})
-
-  })
+                   $("#form-submit").click(function(){
+                       event.preventDefault()
+                       alert("click")
+                       
+                       
+                   })
 
                         </script>
                     </fieldset>
