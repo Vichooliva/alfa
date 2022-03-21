@@ -432,6 +432,18 @@
                   <div class="col-lg-12">
                     <fieldset>
                       <button type="submit" id="form-submit" class="button">Enviar </button>
+                      <script>
+                        fetch('https://backend.alfametrics.cl/contact', {
+      headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify({text:"Prueba", from:"hugojerez21@gmail.com"})
+
+  })
+
+                        </script>
                     </fieldset>
                   </div>
                 </div>
@@ -439,6 +451,7 @@
             </div>
           </div>
         </div>
+          
         <div class="col-lg-3">
           <div class="right-info">
             <ul>
@@ -456,7 +469,7 @@
               </li>
               <li>
                 <h6>Website</h6>
-                <span>www.meeting.edu</span>
+                <span>www.Alfametrics.cl</span>
               </li>
             </ul>
           </div>
@@ -464,7 +477,7 @@
       </div>
     </div>
     <div class="footer">
-      <p>Todos los derechos reservados por <a href="https://alfametrix.com" target="_parent" >AlfaMetrics </a>2022 <br></p>
+      <p>Todos los derechos reservados por <a href="https://alfametrix.cl" target="_parent" >AlfaMetrics </a>2022 <br></p>
     </div>
   </section>
 
